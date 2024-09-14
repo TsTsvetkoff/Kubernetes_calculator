@@ -47,3 +47,7 @@ Note you can also utilize the second client to test the server's ability to hand
 Also you can delete client pods and review how kubernetes will automatically recreate them.
 
 6. Enjoy the server-client architecture!
+7. To stop the created pods execute:
+```bash
+kubectl delete -f=k8s_deployment_server.yaml -f=k8s_deployment_client.yaml 
+```
