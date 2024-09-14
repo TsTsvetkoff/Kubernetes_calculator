@@ -1,0 +1,70 @@
+# client1-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client1-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client1
+  template:
+    metadata:
+      labels:
+        app: client1
+    spec:
+      containers:
+      - name: client1
+        image: sharky2001/my_docker_calc-client1:latest
+        ports:
+        - containerPort: 5555
+
+---
+# client1-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: client1-service
+spec:
+  selector:
+    app: client1
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5555
+
+---
+# client2-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client2-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client2
+  template:
+    metadata:
+      labels:
+        app: client2
+    spec:
+      containers:
+      - name: client2
+        image: sharky2001/my_docker_calc-client2:latest
+        ports:
+        - containerPort: 5555
+
+---
+# client2-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: client2-service
+spec:
+  selector:
+    app: client2
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5555
