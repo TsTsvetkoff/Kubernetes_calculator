@@ -8,5 +8,5 @@ roleRef:
   name: pod-reader
 subjects:
 - kind: ServiceAccount
-  name: default  # replace with your service account
+  name: default
   namespace: default
