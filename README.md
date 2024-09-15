@@ -53,7 +53,7 @@ Note: Kubernetes doesn't natively support running containers in fully interactiv
 python client.py 
 ```
 
-Note you can also utilize the second client to test the server's ability to handle multiple clients aso to monitor the server's logs.
+You can also utilize the second client to test the server's ability to handle multiple clients plus ability to monitor the server's logs.
 Also you can delete client pods and review how kubernetes will automatically recreate them.
 
 ![k8s_demo.png](k8s_demo.png)
