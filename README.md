@@ -1,4 +1,4 @@
-# Python Socket Programming with Docker
+# Python Socket Programming with Kubernetes
 
 This project demonstrates how to use Python's socket programming capabilities to create a server-client architecture, where the server can handle multiple clients. The server and clients are each deployed as separate pods in a Kubernetes cluster. 
 The server is a simple calculator that can perform addition operations of two positive numbers. The clients can connect to the server and send requests to perform these operations. Each client and server run in their own Kubernetes pod, allowing for scalability and management through Kubernetes.
