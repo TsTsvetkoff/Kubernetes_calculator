@@ -7,7 +7,7 @@ The server is a simple calculator that can perform addition operations of two po
 - Docker Desktop with Kubernetes enabled
 
 ## How to Run
-!!! **This project is ment for local execution only** !!!
+!!! **This project is meant for local execution only** !!!
 
 To run the server-client architecture, follow these steps:
 
